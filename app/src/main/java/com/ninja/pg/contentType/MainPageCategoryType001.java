@@ -1,18 +1,19 @@
 package com.ninja.pg.contentType;
 
+import com.ninja.pg.constant.MainPageCategoryType;
 import com.ninja.pg.dataType.DataType001;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ContentType001 {
+public class MainPageCategoryType001 {
 
     public static final List<DataType001> ITEMS = new ArrayList<>();
     private static final int COUNT = 25;
 
     static {
         int startIndex = 0;
-        addItem(new DataType001(String.valueOf(startIndex), "Kotlin", "Kotlin play ground"));
+        addItem(new DataType001(MainPageCategoryType.KOTOLIN, "Kotlin", "Kotlin play ground"));
         startIndex++;
 
         for (int i = startIndex; i <= COUNT; i++) {
@@ -25,7 +26,7 @@ public class ContentType001 {
     }
 
     private static DataType001 createDummyItem(int position) {
-        return new DataType001(String.valueOf(position), "Item " + position, makeDetails(position));
+        return new DataType001(position, "Item " + position, makeDetails(position));
     }
 
     private static String makeDetails(int position) {

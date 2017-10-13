@@ -1,4 +1,4 @@
-package com.ninja.pg.fragment;
+package com.ninja.pg.screen;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -11,17 +11,12 @@ import com.ninja.pg.dataType.DataType001;
 
 import java.util.List;
 
-/**
- * {@link RecyclerView.Adapter} that can display a {@link DataType001} and makes a call to the
- * specified {@link CategoryFragment001.OnListFragmentInteractionListener}.
- * TODO: Replace the implementation with code for your data type.
- */
-public class CategoryRecyclerViewAdapter001 extends RecyclerView.Adapter<CategoryRecyclerViewAdapter001.ViewHolder> {
+public class ListFragmentRecyclerViewAdapter001 extends RecyclerView.Adapter<ListFragmentRecyclerViewAdapter001.ViewHolder> {
 
     private final List<DataType001> mValues;
-    private final CategoryFragment001.OnListFragmentInteractionListener mListener;
+    private final ListFragment001.OnCategoryClickedListener mListener;
 
-    public CategoryRecyclerViewAdapter001(List<DataType001> items, CategoryFragment001.OnListFragmentInteractionListener listener) {
+    public ListFragmentRecyclerViewAdapter001(List<DataType001> items, ListFragment001.OnCategoryClickedListener listener) {
         mValues = items;
         mListener = listener;
     }
@@ -35,17 +30,16 @@ public class CategoryRecyclerViewAdapter001 extends RecyclerView.Adapter<Categor
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
-        holder.mItem = mValues.get(position);
-        holder.mIdView.setText(mValues.get(position).id);
-        holder.mContentView.setText(mValues.get(position).content);
+        final DataType001 item = mValues.get(position);
+        holder.mItem = item;
+        holder.mIdView.setText(String.valueOf(item.id));
+        holder.mContentView.setText(item.content);
 
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (null != mListener) {
-                    // Notify the active callbacks interface (the activity, if the
-                    // fragment is attached to one) that an item has been selected.
-                    mListener.onListFragmentInteraction(holder.mItem);
+                    mListener.onCategoryClicked(holder.mItem);
                 }
             }
         });
@@ -56,7 +50,7 @@ public class CategoryRecyclerViewAdapter001 extends RecyclerView.Adapter<Categor
         return mValues.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ViewHolder extends RecyclerView.ViewHolder {
         public final View mView;
         public final TextView mIdView;
         public final TextView mContentView;

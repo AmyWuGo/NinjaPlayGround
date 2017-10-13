@@ -7,9 +7,7 @@
     android:name="com.ninja.pg.CategoryFragment001"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="16dp"
-    android:layout_marginRight="16dp"
+    android:layout_margin="8dp"
     app:layoutManager="GridLayoutManager"
-    android:layout_column="2"
-    tools:context="com.ninja.pg.fragment.CategoryFragment001"
+    tools:context="com.ninja.pg.screen.ListFragment001"
     tools:listitem="@layout/parts_001"/>

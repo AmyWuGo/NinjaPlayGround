@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context="com.ninja.pg.screen.TenCasesActivity">
+
+
+        <TextView
+            android:id="@+id/case001"
+            style="@style/Case001TextViewStyle"
+            android:onClick="onCase001Clicked"
+            android:text="CASE 1"/>
+
+        <TextView
+            android:id="@+id/case002"
+            style="@style/Case001TextViewStyle"
+            android:onClick="onCase002Clicked"
+            android:text="CASE 2"/>
+
+        <TextView
+            android:id="@+id/case003"
+            style="@style/Case001TextViewStyle"
+            android:onClick="onCase003Clicked"
+            android:text="CASE 3"/>
+
+        <TextView
+            android:id="@+id/case004"
+            style="@style/Case001TextViewStyle"
+            android:onClick="onCase004Clicked"
+            android:text="CASE 4"/>
+
+        <TextView
+            android:id="@+id/case005"
+            style="@style/Case001TextViewStyle"
+            android:onClick="onCase005Clicked"
+            android:text="CASE 5"/>
+
+        <TextView
+            android:id="@+id/case006"
+            style="@style/Case001TextViewStyle"
+            android:onClick="onCase006Clicked"
+            android:text="CASE 6"/>
+
+        <TextView
+            android:id="@+id/case007"
+            style="@style/Case001TextViewStyle"
+            android:onClick="onCase007Clicked"
+            android:text="CASE 7"/>
+
+        <TextView
+            android:id="@+id/case008"
+            style="@style/Case001TextViewStyle"
+            android:onClick="onCase008Clicked"
+            android:text="CASE 8"/>
+
+        <TextView
+            android:id="@+id/case009"
+            style="@style/Case001TextViewStyle"
+            android:onClick="onCase009Clicked"
+            android:text="CASE 9"/>
+
+        <TextView
+            android:id="@+id/case010"
+            style="@style/Case001TextViewStyle"
+            android:onClick="onCase010Clicked"
+            android:text="CASE 10"/>
+
+
+    </LinearLayout>
+</ScrollView>
