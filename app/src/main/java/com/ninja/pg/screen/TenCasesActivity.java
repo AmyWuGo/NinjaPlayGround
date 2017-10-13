@@ -6,7 +6,17 @@ import android.view.View;
 
 import com.ninja.pg.R;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public abstract class TenCasesActivity extends AppCompatActivity {
+
+    protected static final List<String> stringList = new ArrayList<>();
+    static {
+        stringList.add("aaa");
+        stringList.add("bbb");
+        stringList.add("ccc");
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
