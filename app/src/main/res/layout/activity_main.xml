@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ninja.pg.MainActivity">
+
+    <fragment
+        android:id="@+id/main_list"
+        tools:layout="@layout/fragment_category_list_001"
+        android:name="com.ninja.pg.fragment.CategoryFragment001"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>
